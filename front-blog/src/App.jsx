@@ -1,19 +1,34 @@
 import React from 'react';
-import './App.css';
 import Header from './component/Header/Header';
-import Card from './component/Card/CardArticle';
-import { Typography } from '@mui/material';
+import { FooterGrid, HeaderGrid, Item, MainGrid, MainWrapp, SidebarGrid } from './styled.js';
+import CardArticle from './component/Card/CardArticle.jsx';
+
+// import Card from './component/Card/CardArticle';
+// import { Typography } from '@mui/material';
 // import Footer from './component/Footer/Footer';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Typography sx={{ marginTop: 7, marginLeft:10 }}>
-      <Card />
-      </Typography>
-      {/* <Footer /> */}
-    </div>
+    <MainWrapp container >
+    <HeaderGrid size={12}>
+      <Item>
+        <Header />
+      </Item>
+    </HeaderGrid>
+    {/* <SidebarGrid size={2}>
+      <Item>Sidebar</Item>
+    </SidebarGrid> */}
+    <MainGrid size={12}>
+      <Item>
+      <CardArticle />
+      </Item>
+    </MainGrid>
+    <FooterGrid size={12}>
+      <Item>Footer</Item>
+    </FooterGrid>
+  </MainWrapp>
+    
   );
 }
 
