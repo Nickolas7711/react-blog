@@ -14,7 +14,7 @@ export const Item = styled('div')(() => ({
 }));
 
 export const HeaderGrid = styled(Grid2)(() => ({
-  height: '11%',
+  height: '7%',
     
 }));
 
@@ -27,6 +27,7 @@ export const HeaderGrid = styled(Grid2)(() => ({
 export const MainGrid = styled(Grid2)(() => ({
  padding: '4vw',
  backgroundColor: '#253838',
+ height: 'auto',
  
 }));
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './component/Header/Header';
-import { FooterGrid, HeaderGrid, Item, MainGrid, MainWrapp, SidebarGrid } from './styled.js';
+import { FooterGrid, HeaderGrid, Item, MainGrid, MainWrapp } from './styled.js';
 import CardArticle from './component/Card/CardArticle.jsx';
 
 // import Card from './component/Card/CardArticle';
