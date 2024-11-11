@@ -26,11 +26,12 @@ export const HeaderGrid = styled(Grid2)(() => ({
 
 export const MainGrid = styled(Grid2)(() => ({
  padding: '4vw',
+ backgroundColor: '#253838',
  
 }));
 
 export const FooterGrid = styled(Grid2)(() => ({
   height: '15vw',
-  backgroundColor: 'blue',
+  backgroundColor: '#294b5e',
 
 }));
