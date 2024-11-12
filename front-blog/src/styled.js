@@ -2,8 +2,11 @@
 import { Grid2, styled } from '@mui/material';
 
 export const MainWrapp = styled(Grid2)(() => ({
-  height: '100vh',
-  width: '100vw',
+  height: 'auto',
+  width: '70vw',
+  backgroundColor: '#242428',
+  borderRadius: '30px',
+  
   
 }));
 
@@ -11,10 +14,12 @@ export const Item = styled('div')(() => ({
   padding: '0',
   textAlign: 'center',
   
+  
 }));
 
 export const HeaderGrid = styled(Grid2)(() => ({
   height: '7%',
+  padding: '30px',
     
 }));
 
@@ -26,13 +31,27 @@ export const HeaderGrid = styled(Grid2)(() => ({
 
 export const MainGrid = styled(Grid2)(() => ({
  padding: '4vw',
- backgroundColor: '#253838',
+ backgroundColor: '#242428',
  height: 'auto',
+ borderRadius: ' 20px 20px 0px 0px',
  
 }));
 
 export const FooterGrid = styled(Grid2)(() => ({
-  height: '15vw',
-  backgroundColor: '#294b5e',
+  height: '10vw',
+  backgroundColor: '#242428',
+  borderRadius: ' 0px 0px 20px 20px',
+  position: 'relative',       
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    top: '10px',              
+    left: '50%',             
+    width: '60vw',          
+    height: '2px',           
+    backgroundColor: '#93e7e6',  
+    transform: 'translateX(-50%)',
+    boxShadow: `0 0 8px #00e6e6, 0 0 12px #00e6e6, 0 0 16px #00e6e6, 0 0 20px #00e6e6`,
+  },
 
 }));
