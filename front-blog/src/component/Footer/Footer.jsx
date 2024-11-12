@@ -1,20 +1,23 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import AvatarFooter from './AvatarFooter';
-import { Logo } from '../Header/ModduleHeaderStyles';
-import { FooterContent, Telephone } from './ModuleFooterStyles';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { Typography } from '@mui/material';
+import { BoxFooter, FooterInner, FooterItem } from './ModuleFooterStyles';
 
 function Footer() {
   return (
-    <FooterContent>
-        <AvatarFooter />
-      <Telephone>
-      <a href="tel:+380994902539">
-      <FontAwesomeIcon icon={faPhone} /> Tel.</a>
-      </Telephone>
-      <Logo>LOGO</Logo>
-    </FooterContent>
+    <BoxFooter>
+      <FooterInner>
+        <FooterItem>
+          <Typography>Design by Nickolas77</Typography>
+        </FooterItem>
+        <FooterItem>
+          <GitHubIcon />
+        </FooterItem>
+        <FooterItem>
+          <Typography>Copyleft 2024</Typography>
+        </FooterItem>
+      </FooterInner>
+    </BoxFooter>
   );
 }
 

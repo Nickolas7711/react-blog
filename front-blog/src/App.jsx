@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './component/Header/Header';
 import { FooterGrid, HeaderGrid, Item, MainGrid, MainWrapp } from './styled.js';
 import CardArticle from './component/Card/CardArticle.jsx';
+import Footer from './component/Footer/Footer.jsx';
 
 // import Card from './component/Card/CardArticle';
 // import { Typography } from '@mui/material';
@@ -25,7 +26,9 @@ function App() {
       </Item>
     </MainGrid>
     <FooterGrid size={12}>
-      <Item>Footer</Item>
+      <Item>
+        <Footer />
+      </Item>
     </FooterGrid>
   </MainWrapp>
 

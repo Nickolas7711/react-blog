@@ -6,7 +6,7 @@ export const BoxHeader = styled('div')(() => ({
  flexDirection: 'column',
  justifyContent: 'flex-start',
  padding: '10px',
- height: '21vh',
+ height: '10vw',
  position: 'relative',       
   '&::before': {
     content: '""',
