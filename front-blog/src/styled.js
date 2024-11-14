@@ -4,7 +4,7 @@ import { Grid2, styled } from '@mui/material';
 export const MainWrapp = styled(Grid2)(() => ({
   height: 'auto',
   width: '70vw',
-  backgroundColor: '#242428',
+  backgroundColor: '#212121',
   borderRadius: '30px',
   
   
@@ -23,23 +23,17 @@ export const HeaderGrid = styled(Grid2)(() => ({
     
 }));
 
-// export const SidebarGrid = styled(Grid2)(() => ({
-//   backgroundColor: 'blue',
-//   height: 'auto',
-  
-// }));
-
 export const MainGrid = styled(Grid2)(() => ({
- padding: '4vw',
- backgroundColor: '#242428',
+ padding: '1vw 4vw 2vw 4vw',
+ backgroundColor: '#212121',
  height: 'auto',
- borderRadius: ' 20px 20px 0px 0px',
+//  borderRadius: ' 20px 20px 0px 0px',
  
 }));
 
 export const FooterGrid = styled(Grid2)(() => ({
   height: '10vw',
-  backgroundColor: '#242428',
+  backgroundColor: '#212121',
   borderRadius: ' 0px 0px 20px 20px',
   position: 'relative',       
   '&::before': {
@@ -47,7 +41,7 @@ export const FooterGrid = styled(Grid2)(() => ({
     position: 'absolute',
     top: '10px',              
     left: '50%',             
-    width: '60vw',          
+    width: '64vw',          
     height: '2px',           
     backgroundColor: '#93e7e6',  
     transform: 'translateX(-50%)',

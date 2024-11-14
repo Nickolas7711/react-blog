@@ -6,19 +6,10 @@ export const BoxHeader = styled('div')(() => ({
  flexDirection: 'column',
  justifyContent: 'flex-start',
  padding: '10px',
- height: '10vw',
- position: 'relative',       
-  '&::before': {
-    content: '""',
-    position: 'absolute',
-    bottom: '10px',              
-    left: '50%',             
-    width: '60vw',          
-    height: '4px',           
-    backgroundColor: 'black',  
-    transform: 'translateX(-50%)',
+ height: 'auto',
+ 
     
-  },
+ 
 }));
 
 export const Title = styled('div')(() => ({
@@ -27,7 +18,8 @@ export const Title = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'flex-start',
   width: '20vw',
-  color: '#93e7e6',
+  color: '#72F8FF',
+  paddingLeft:'50px',
   textShadow: `0 0 3px #00e6e6, 0 0 2px #00e6e6, 0 0 14px #00e6e6, 0 0 20px #00e6e6`,
   
  }));
@@ -38,9 +30,20 @@ export const Title = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'flex-start',
   width: '60vw',
-  paddingLeft: '47px',
+  paddingLeft: '52px',
   gap: '20px',
-  
+  position: 'relative',       
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    top: '62px',
+    // bottom: '10px',              
+    left: '57%',             
+    width: '60vw',          
+    height: '4px',           
+    backgroundColor: 'black',  
+    transform: 'translateX(-55%)',
+  },
  }));
 
  export const BoxButtonContact = styled('div')(() => ({

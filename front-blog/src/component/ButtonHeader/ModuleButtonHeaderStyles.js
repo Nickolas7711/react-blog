@@ -10,7 +10,7 @@ export const BoxButton = styled(MuiButton)(({ active }) => ({
   justifyContent: 'center',
   paddingBottom: '1px',
   position: 'relative',
-  color: '#93e7e6',
+  color: '#6AEBFF',
 
   '&:hover': {
     borderBottom: 'none',  // Отключаем стандартное подчеркивание при наведении
@@ -24,12 +24,12 @@ export const BoxButton = styled(MuiButton)(({ active }) => ({
     left: 0,
     width: active ? '100%' : '0%',  // Подчеркивание по ширине текста, если активен
     height: '3px',  // Толщина подчеркивания
-    backgroundColor: active ? '#93e7e6' : 'transparent',  // Цвет подчеркивания
+    backgroundColor: active ? '#6AEBFF' : 'transparent',  // Цвет подчеркивания
     transition: 'width 0.3s ease',  // Анимация при изменении ширины
   },
 
   '&:hover::after': {
     width: '100%',  // Подчеркивание при наведении
-    backgroundColor: '#93e7e6',  // Цвет подчеркивания при наведении
+    backgroundColor: '#6AEBFF',  // Цвет подчеркивания при наведении
   },
 }));

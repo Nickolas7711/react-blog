@@ -6,7 +6,7 @@ import CustomButton from "../ButtonHeader/CustomButton";
 
 function Header() {
 
-  const [activeButton, setActiveButton] = useState('About'); 
+  const [activeButton, setActiveButton] = useState('Home'); 
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
@@ -15,7 +15,7 @@ function Header() {
   return (
   <BoxHeader>
     <Title>
-     <Typography variant="h2" component="div" sx={{ flexGrow: 1 }}>
+     <Typography variant="h2" component="div" >
        Blog Title
      </Typography>
     </Title>

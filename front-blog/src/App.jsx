@@ -4,11 +4,6 @@ import { FooterGrid, HeaderGrid, Item, MainGrid, MainWrapp } from './styled.js';
 import CardArticle from './component/Card/CardArticle.jsx';
 import Footer from './component/Footer/Footer.jsx';
 
-// import Card from './component/Card/CardArticle';
-// import { Typography } from '@mui/material';
-// import Footer from './component/Footer/Footer';
-
-
 function App() {
   return (
     <MainWrapp container >
@@ -17,9 +12,6 @@ function App() {
         <Header />
       </Item>
     </HeaderGrid>
-    {/* <SidebarGrid size={2}>
-      <Item>Sidebar</Item>
-    </SidebarGrid> */}
     <MainGrid size={12}>
       <Item>
       <CardArticle />

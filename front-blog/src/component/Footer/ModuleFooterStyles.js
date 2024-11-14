@@ -12,9 +12,9 @@ export const BoxFooter = styled('div')(() => ({
 export const FooterInner = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'row',
-  width: '50vw',
+  width: '100%',
   height: '10vh',
-  paddingLeft: '45px',
+  paddingLeft: '22px',
   gap: '10px',
 }));
 
@@ -23,6 +23,13 @@ export const FooterItem = styled('div')(() => ({
   flexDirection: 'row',
   justifyContent: 'space-around',
   alignItems: 'center',
-  color: '#93e7e6',
+  color: '#72F8FF',
   
 }));
+
+export const Credits = styled('div')(() => ({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  width: '60%',
+}))
