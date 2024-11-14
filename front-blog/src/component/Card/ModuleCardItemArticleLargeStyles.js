@@ -64,3 +64,29 @@ export const DescriptionsArticle = styled('div')(() => ({
   paddingTop: '20px',
   
 }));
+
+export const BoxBtnArticle = styled('div')(() => ({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'flex-end',
+  paddingTop: '50px',
+  paddingRight: '15px',
+  
+  
+}));
+
+export const ButtonArticle = styled('div')(() => ({
+  display: 'flex',
+  justifyContent:'center',
+  alignItems: 'center',
+  width: '115px',
+  height: '23px',
+  backgroundColor: '#72F8FF',
+  borderRadius: '10px',
+  fontFamily: 'Inter',
+  fontSize: '12px',
+  fontWeight: '600',
+  color: '#000000',
+  
+  
+}));
