@@ -1,7 +1,7 @@
 services:
   frontend:
     build:
-      context: ./front-blog
+      context: ./react-blog/front-blog
       dockerfile: Dockerfile
     container_name: front-blog
     ports:
