@@ -6,8 +6,8 @@ services:
     container_name: front-blog
     ports:
       - "7777:7777"
-    networks:
-      - app-network
+    # networks:
+    #   - app-network
     restart: unless-stopped
     environment:
       - NODE_ENV=production
