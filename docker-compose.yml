@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./front-blog
+      dockerfile: Dockerfile
+    container_name: front-blog
+    ports:
+      - "7777:7777"
+    networks:
+      - app-network
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=http://server:5000 # Переменная окружения для React
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: server
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+networks:
+  app-network:
+    driver: bridge
