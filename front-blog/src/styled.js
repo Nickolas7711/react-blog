@@ -19,7 +19,7 @@ export const HeaderGrid = styled(Grid2)(() => ({
 export const MainGrid = styled(Grid2)(() => ({
  padding: '1vw 4vw 2vw 4vw',
  backgroundColor: '#212121',
- height: '140vh',
+ minHeight: '140vh',
  
 }));
 
