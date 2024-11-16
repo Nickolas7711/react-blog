@@ -10,13 +10,6 @@ export const MainWrapp = styled(Grid2)(() => ({
   
 }));
 
-export const Item = styled('div')(() => ({
-  padding: '0',
-  textAlign: 'center',
-  
-  
-}));
-
 export const HeaderGrid = styled(Grid2)(() => ({
   height: '7%',
   padding: '30px',
@@ -26,8 +19,7 @@ export const HeaderGrid = styled(Grid2)(() => ({
 export const MainGrid = styled(Grid2)(() => ({
  padding: '1vw 4vw 2vw 4vw',
  backgroundColor: '#212121',
- height: 'auto',
-//  borderRadius: ' 20px 20px 0px 0px',
+ height: '140vh',
  
 }));
 

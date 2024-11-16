@@ -1,36 +1,40 @@
 import cardData from '../CardData.json';
-// import CardItem from "./CardItem";
 
 import CadrItemArticleLarge from "./CardItemArticleLarge";
-import { ArticleLarge, ArticleSmall, ArticleSmollBox, ArticleWrapp, CalendarBox, Item } from "./ModuleCardArticleStyles";
+import CadrItemArticleSmall from './CardItemArticleSmall';
+import CalendarWidget from '../Calendar/CalendarWidget'
+import { 
+  ArticleLarge, 
+  ArticleSmall, 
+  ArticleSmollBox, 
+  ArticleWrapp, 
+  CalendarBox,
+} from "./ModuleCardArticleStyles";
 
 
 
 export default function CardArticle() {
   
   return (
-    // <div style={{display: 'flex', flexDirection: 'row',flexWrap:'wrap', justifyContent: 'space-between', gap: '10px', height:'auto'}}>
-    //   {cardData.map((card) => (
+     //   {cardData.map((card) => (
     //     <CardItem key={card.id} card={card} />
     //   ))}
-    // </div>
-    <ArticleWrapp container>
+    
+    <ArticleWrapp container spacing={2}>
   <ArticleLarge size={12}>
     <CadrItemArticleLarge card={cardData[0]}/>
   </ArticleLarge>
   <ArticleSmall size={6}>
-    <Item>ArticleSmall</Item>
+    <CadrItemArticleSmall card={cardData[1]} />
   </ArticleSmall>
   <CalendarBox size={6}>
-    <Item>CalendarBox</Item>
+    <CalendarWidget />
   </CalendarBox>
   <ArticleSmollBox size={12}>
      <ArticleSmall size={6}>
-    <Item>ArticleSmall</Item>
+     <CadrItemArticleSmall card={cardData[2]} />
   </ArticleSmall>
   </ArticleSmollBox>
 </ArticleWrapp>
-
-  );
-  
+  );  
 }
