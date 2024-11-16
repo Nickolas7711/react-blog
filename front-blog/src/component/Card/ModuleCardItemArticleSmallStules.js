@@ -6,8 +6,10 @@ export const CardItemSmall = styled('div')(() => ({
   justifyContent: 'flex-start',
   padding: '15px',
   width: 'auto',
-  height: '243px',
+  height: '15vw',
   gap: '50px',
+  borderRadius: '10px',
+  border: '2px solid #72F8FF '
 }));
 
 export const CardInnerTextSmall = styled('div')(() => ({
@@ -50,16 +52,16 @@ export const DescriptionsArticleSmall = styled('div')(() => ({
   fontSize: '12px',
   fontWeight: '600',
   color: '#ffffff',
-  paddingTop: '20px',
+  paddingTop: '4px',
   
 }));
 
 export const BoxBtnArticleSmall = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'flex-end',
+  justifyContent: 'flex-start',
   paddingTop: '50px',
-  paddingRight: '15px',
+  paddingLeft: '15px',
   
   
 }));

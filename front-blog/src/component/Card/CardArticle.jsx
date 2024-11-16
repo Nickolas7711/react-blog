@@ -2,39 +2,38 @@ import cardData from '../CardData.json';
 
 import CadrItemArticleLarge from "./CardItemArticleLarge";
 import CadrItemArticleSmall from './CardItemArticleSmall';
-import CalendarWidget from '../Calendar/CalendarWidget'
+import CalendarWidget from '../Calendar/CalendarWidget';
 import { 
   ArticleLarge, 
   ArticleSmall, 
-  ArticleSmollBox, 
   ArticleWrapp, 
   CalendarBox,
 } from "./ModuleCardArticleStyles";
 
-
-
 export default function CardArticle() {
-  
   return (
-     //   {cardData.map((card) => (
-    //     <CardItem key={card.id} card={card} />
-    //   ))}
-    
     <ArticleWrapp container spacing={2}>
-  <ArticleLarge size={12}>
-    <CadrItemArticleLarge card={cardData[0]}/>
-  </ArticleLarge>
-  <ArticleSmall size={6}>
-    <CadrItemArticleSmall card={cardData[1]} />
-  </ArticleSmall>
-  <CalendarBox size={6}>
-    <CalendarWidget />
-  </CalendarBox>
-  <ArticleSmollBox size={12}>
-     <ArticleSmall size={6}>
-     <CadrItemArticleSmall card={cardData[2]} />
-  </ArticleSmall>
-  </ArticleSmollBox>
-</ArticleWrapp>
-  );  
+      {/* Первая большая статья */}
+      <ArticleLarge size={12}>
+        <CadrItemArticleLarge card={cardData[0]} />
+      </ArticleLarge>
+
+      {/* Первая маленькая статья */}
+      <ArticleSmall size={6}>
+        <CadrItemArticleSmall card={cardData[1]} />
+      </ArticleSmall>
+
+      {/* Календарь фиксирован */}
+      <CalendarBox size={6}>
+        <CalendarWidget />
+      </CalendarBox>
+
+      {/* Оставшиеся статьи */}
+      {cardData.slice(2).map((card) => (
+        <ArticleSmall key={card.id} size={6}>
+          <CadrItemArticleSmall card={card} />
+        </ArticleSmall>
+      ))}
+    </ArticleWrapp>
+  );
 }

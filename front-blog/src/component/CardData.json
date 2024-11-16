@@ -32,6 +32,29 @@
     "title": "Title of the article 5",
     "subheader": "02.12.24",
     "image": "./images/foto-kamni3.jpg",
-    "article": "Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 4"
+    "article": "Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 5"
+  },
+  {
+    "id": 6,
+    "title": "Title of the article 6",
+    "subheader": "02.12.24",
+    "image": "./images/foto-kamni3.jpg",
+    "article": "Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 6"
+  },
+  {
+    "id": 7,
+    "title": "Title of the article 7",
+    "subheader": "02.12.24",
+    "image": "./images/foto-kamni3.jpg",
+    "article": "Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 7"
+  },
+  {
+    "id": 8,
+    "title": "Title of the article 8",
+    "subheader": "02.12.24",
+    "image": "./images/foto-kamni3.jpg",
+    "article": "Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 8"
   }
+
+
 ]

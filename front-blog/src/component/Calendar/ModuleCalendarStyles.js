@@ -3,11 +3,13 @@ import { styled } from '@mui/material/styles';
 export const CalendarWidgetBox = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'flex-start',
-  padding: '10px',
+  justifyContent: 'center',
+  padding: '10px 30px 20px 30px',
   width: 'auto',
   height: '243px',  
   gap: '10px',
+  borderRadius: '10px',
+  border: '2px solid #72F8FF '
 }));
 
 export const BoxMonthYear = styled('div')(() => ({

@@ -19,37 +19,21 @@ export const ArticleLarge = styled('div')(() => ({
 }));
 
 export const ArticleSmall = styled(Grid2)(() => ({
+  display: 'flex',
+  flexDirection: 'row',
   width: '49%',
-  height: '17vw',
   backgroundColor: '#212121',
-  borderRadius: '10px',
-  border: '2px solid #72F8FF '
-    
+      
 }));
 
 export const CalendarBox = styled(Grid2)(() => ({
   display: 'flex',
   justifyContent: 'center',
-  width: '40%',
+  width: '48%',
   height: '17vw',
   backgroundColor: '#212121',
-  borderRadius: '10px',
-  border: '2px solid #72F8FF '
-    
-}));
-
-export const ArticleSmollBox = styled(Grid2)(() => ({
-  width: '100%',
-  height: '10vw',
-  backgroundColor: '#212121',
   
     
 }));
 
-// export const Item = styled('div')(() => ({
-//   padding: '0',
-//   textAlign: 'center',
-//   color: 'white',
-  
-  
-// }));
+
