@@ -2,7 +2,7 @@ import { Grid2, styled } from "@mui/material";
 
 
 export const ArticleWrapp = styled(Grid2)(() => ({
-  minHeighteight: '100vh',
+  height: 'auto',
   backgroundColor: '#212121',
   gap: '20px',
 
