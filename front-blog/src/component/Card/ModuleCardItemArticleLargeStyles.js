@@ -9,6 +9,7 @@ export const CardItemLarge = styled('div')(() => ({
   height: '243px',
   paddingLeft: '60px',
   gap: '50px',
+  
 }));
 
 export const CardImages = styled('img')(() => ({

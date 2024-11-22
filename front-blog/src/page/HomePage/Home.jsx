@@ -1,16 +1,17 @@
-import cardData from '../CardData.json';
+import React from 'react';
+import cardData from '../../component/CardData.json';
 
-import CadrItemArticleLarge from "./CardItemArticleLarge";
-import CadrItemArticleSmall from './CardItemArticleSmall';
-import CalendarWidget from '../Calendar/CalendarWidget';
+import CadrItemArticleLarge from "../../component/Card/CardItemArticleLarge";
+import CadrItemArticleSmall from '../../component/Card/CardItemArticleSmall';
+import CalendarWidget from '../../component/Calendar/CalendarWidget';
 import { 
   ArticleLarge, 
   ArticleSmall, 
   ArticleWrapp, 
   CalendarBox,
-} from "./ModuleCardArticleStyles";
+} from "./ModuleHomeStyles";
 
-export default function CardArticle() {
+export default function Home() {
   return (
     <ArticleWrapp container spacing={2}>
       {/* Первая большая статья */}
