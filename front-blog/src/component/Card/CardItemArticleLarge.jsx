@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BoxBtnArticle, ButtonArticle, CardImages, CardInnerText, CardItemLarge, DateArticle, DescriptionsArticle, TitleArticle } from './ModuleCardItemArticleLargeStyles';
 
 
 function CadrItemArticleLarge ({ card }){
+  const navigate = useNavigate();
+
+  const handleReadMore = () => {
+    const params = card.id;
+    navigate(`/article/${params}`);
+  }
 
   return (
     <CardItemLarge>
@@ -15,9 +22,9 @@ function CadrItemArticleLarge ({ card }){
       <CardInnerText>
         <TitleArticle>{card.title}</TitleArticle>
         <DateArticle>Date: {card.subheader} </DateArticle>
-        <DescriptionsArticle>{card.article}</DescriptionsArticle> 
+        <DescriptionsArticle>{card.article.slice(0, 1000)} ...</DescriptionsArticle> 
         <BoxBtnArticle>
-          <ButtonArticle>Read More</ButtonArticle>
+          <ButtonArticle onClick={handleReadMore}>Read More</ButtonArticle>
         </BoxBtnArticle>     
       </CardInnerText>      
     </CardItemLarge>

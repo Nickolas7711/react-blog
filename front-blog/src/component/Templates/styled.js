@@ -3,7 +3,7 @@ import { Grid2, styled } from '@mui/material';
 
 export const MainWrapp = styled(Grid2)(() => ({
   height: 'auto',
-  width: '70vw',
+  maxWidth: '70vw',
   backgroundColor: '#212121',
   borderRadius: '30px',
   
@@ -19,7 +19,8 @@ export const HeaderGrid = styled(Grid2)(() => ({
 export const MainGrid = styled(Grid2)(() => ({
  padding: '1vw 4vw 2vw 4vw',
  backgroundColor: '#212121',
- minHeight: '140vh',
+ minHeight: 'auto',
+ overflow: 'auto',
  
 }));
 

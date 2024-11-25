@@ -14,7 +14,7 @@ const pulsB = keyframes`
 // Контейнер Loader
 export const LoaderWrapp = styled('div')(() => ({
   width: '100%',
-  height: '50%',
+  height: '100%',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
