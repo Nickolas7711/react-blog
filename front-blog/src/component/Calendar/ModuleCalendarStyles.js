@@ -14,7 +14,12 @@ export const CalendarWidgetBox = styled('div')(() => ({
   '@media (max-width: 1220px)': {
     padding: '10px 17px 20px 24px',
     
-  }
+  },
+
+  // '@media (max-width: 390px)': {
+  //   display: 'block',
+    
+  // }
 }));
 
 export const BoxMonthYear = styled('div')(() => ({
