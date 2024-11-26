@@ -9,7 +9,30 @@ export const CardItemSmall = styled('div')(() => ({
   height: '15vw',
   gap: '50px',
   borderRadius: '10px',
-  border: '2px solid #72F8FF '
+  border: '2px solid #72F8FF ',
+
+  '@media (max-width: 390px)': {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    height: '156px',
+    paddingLeft: '10px',
+    gap: '15px',
+  }
+}));
+
+export const CardImagesSmall = styled('img')(() => ({
+  display: 'none',
+
+  '@media (max-width: 390px)': {
+    width: '80px',
+    height: '73px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'cover',
+    borderRadius: '10px',
+  },
+
 }));
 
 export const CardInnerTextSmall = styled('div')(() => ({
@@ -19,6 +42,10 @@ export const CardInnerTextSmall = styled('div')(() => ({
   width: 'auto',
   height: '220px',
   gap: '5px',
+
+  '@media (max-width: 390px)': {
+    height: 'auto',
+  },
   
 }));
 
@@ -31,6 +58,10 @@ export const TitleArticleSmall = styled('div')(() => ({
   fontSize: '24px',
   fontWeight: '600',
   color: '#ffffff',
+
+  '@media (max-width: 390px)': {
+    fontSize: '20px',
+  },
   
 }));
 export const DateArticleSmall = styled('div')(() => ({
@@ -65,6 +96,9 @@ export const BoxBtnArticleSmall = styled('div')(() => ({
 
   '@media (max-width: 1220px)': {
     paddingTop: '15px',
+    justifyContent: 'flex-end',
+    paddingRigth: '15px',
+    paddingLeft: '0px',
   }
   
   

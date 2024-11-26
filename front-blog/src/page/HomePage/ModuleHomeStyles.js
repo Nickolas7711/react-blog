@@ -46,7 +46,11 @@ export const ArticleSmall = styled(Grid2)(() => ({
       2px 9px 50px hsla(0, 0%, 0%, 0.1), 
       -2px 9px 60px hsla(0, 0%, 0%, 0.1), 
       0 0 15px 3px #72F8FF`,
-  }
+  },
+
+  '@media (max-width: 390px)': {
+    width: '100%',
+  },
       
 }));
 
@@ -56,7 +60,11 @@ export const CalendarBox = styled('div')(() => ({
   width: '48%',
   height: '17vw',
   backgroundColor: '#212121',
-  
+
+  '@media (max-width: 390px)': {
+    display: 'none',
+    
+  }
     
 }));
 
