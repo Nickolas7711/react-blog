@@ -4,11 +4,19 @@ export const CardItemLarge = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'flex-start',
+  alignItems: 'center',
   padding: '15px',
   width: 'auto',
-  height: '243px',
+  height: 'auto',
   paddingLeft: '60px',
   gap: '50px',
+
+  '@media (max-width: 1220px)': {
+    gap: '29px',
+    height: '156px',
+    paddingLeft: '35px',
+    
+  }
   
 }));
 
@@ -20,6 +28,11 @@ export const CardImages = styled('img')(() => ({
   justifyContent: 'center',
   overflow: 'cover',
   borderRadius: '10px',
+
+  '@media (max-width: 1220px)': {
+    width: '160px',
+    height: '145px',
+  }
 }));
 
 export const CardInnerText = styled('div')(() => ({
@@ -29,6 +42,12 @@ export const CardInnerText = styled('div')(() => ({
   width: 'auto',
   height: '220px',
   gap: '5px',
+
+  '@media (max-width: 1220px)': {
+    width: 'auto',
+    height: '12.049vw',
+    gap: 'opx',
+  }
   
 }));
 
@@ -72,6 +91,10 @@ export const BoxBtnArticle = styled('div')(() => ({
   justifyContent: 'flex-end',
   paddingTop: '50px',
   paddingRight: '15px',
+
+  '@media (max-width: 1220px)': {
+    paddingTop: '0.5vw',
+  }
   
   
 }));

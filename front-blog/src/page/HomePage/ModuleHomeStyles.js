@@ -4,14 +4,19 @@ import { Grid2, styled } from "@mui/material";
 export const ArticleWrapp = styled(Grid2)(() => ({
   height: 'auto',
   backgroundColor: '#212121',
-  gap: '20px',
+  gap: '15px',
   
+  '@media (max-width: 1220px)': {
+    gap: '15px',
+    
+    
+  }
     
 }));
 
 export const ArticleLarge = styled('div')(() => ({
   width: '100%',
-  height: '14.425vw',
+  height: 'auto',
   backgroundColor: '#212121',
   borderRadius: '10px',
   border: '2px solid #72F8FF ',
@@ -45,7 +50,7 @@ export const ArticleSmall = styled(Grid2)(() => ({
       
 }));
 
-export const CalendarBox = styled(Grid2)(() => ({
+export const CalendarBox = styled('div')(() => ({
   display: 'flex',
   justifyContent: 'center',
   width: '48%',

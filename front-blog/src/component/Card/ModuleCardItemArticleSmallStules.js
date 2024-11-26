@@ -62,6 +62,10 @@ export const BoxBtnArticleSmall = styled('div')(() => ({
   justifyContent: 'flex-start',
   paddingTop: '50px',
   paddingLeft: '15px',
+
+  '@media (max-width: 1220px)': {
+    paddingTop: '15px',
+  }
   
   
 }));

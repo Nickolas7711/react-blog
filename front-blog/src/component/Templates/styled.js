@@ -21,6 +21,10 @@ export const MainGrid = styled(Grid2)(() => ({
  backgroundColor: '#212121',
  minHeight: 'auto',
  overflow: 'auto',
+
+ '@media (max-width: 1220px)': {
+  padding: '1vw 3vw 2vw 6vw',
+}
  
 }));
 

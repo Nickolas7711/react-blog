@@ -6,10 +6,15 @@ export const CalendarWidgetBox = styled('div')(() => ({
   justifyContent: 'center',
   padding: '10px 30px 20px 30px',
   width: 'auto',
-  height: '243px',  
+  height: 'auto',  
   gap: '10px',
   borderRadius: '10px',
-  border: '2px solid #72F8FF '
+  border: '2px solid #72F8FF ',
+
+  '@media (max-width: 1220px)': {
+    padding: '10px 17px 20px 24px',
+    
+  }
 }));
 
 export const BoxMonthYear = styled('div')(() => ({
@@ -68,4 +73,9 @@ export const NumberDay = styled('div')(({ status }) => ({
   '&:hover': {
     backgroundColor: status === 'open' ? '#66BB6A' : '#6AEBFF', // Изменение цвета при наведении
   },
+
+  '@media (max-width: 1610px)': {
+    width: '25px',
+    height: '25px',
+  }
 }));
