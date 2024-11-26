@@ -22,10 +22,9 @@ export const Title = styled('div')(() => ({
   paddingLeft:'50px',
   textShadow: `0 0 3px #00e6e6, 0 0 2px #00e6e6, 0 0 14px #00e6e6, 0 0 20px #00e6e6`,
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     width: 'auto',
-    justifyContent: 'center',
-    paddingLeft:'0px',
+    paddingLeft:'10px',
 
   }
   
@@ -51,7 +50,7 @@ export const Title = styled('div')(() => ({
     backgroundColor: 'black',  
     transform: 'translateX(-55%)',
 
-    '@media (max-width: 390px)': {
+    '@media (max-width: 468px)': {
       top: '158px',
       left: '56%',
       width: '70vw'
@@ -60,7 +59,7 @@ export const Title = styled('div')(() => ({
 
   },
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     width: 'auto',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -76,7 +75,7 @@ export const Title = styled('div')(() => ({
   justifyContent: 'flex-end',
   width: '100%',
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     width: 'auto',
     alignItems: 'flex-start',
     paddingLeft: '0px',

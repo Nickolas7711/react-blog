@@ -18,7 +18,7 @@ export const CardItemLarge = styled('div')(() => ({
     
   },
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     alignItems: 'flex-start',
     gap: '15px',
     height: '156px',
@@ -42,7 +42,7 @@ export const CardImages = styled('img')(() => ({
     height: '145px',
   },
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     width: '80px',
     height: '73px',
   },
@@ -74,7 +74,7 @@ export const TitleArticle = styled('div')(() => ({
   fontWeight: '600',
   color: '#ffffff',
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     fontSize: '20px',
     
     
@@ -103,7 +103,7 @@ export const DescriptionsArticle = styled('div')(() => ({
   color: '#ffffff',
   paddingTop: '20px',
 
-  '@media (max-windth: 390px)': {
+  '@media (max-windth: 468px)': {
     paddingTop: '10px',
   },
   

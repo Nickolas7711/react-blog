@@ -7,7 +7,7 @@ export const MainWrapp = styled(Grid2)(() => ({
   backgroundColor: '#212121',
   borderRadius: '30px',
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     maxWidth: '90vw',
   }
   
@@ -18,7 +18,7 @@ export const HeaderGrid = styled(Grid2)(() => ({
   height: '7%',
   padding: '30px',
 
-  '@media (max-width: 390px': {
+  '@media (max-width: 468px': {
     padding: '15px',
   }
     
@@ -34,7 +34,7 @@ export const MainGrid = styled(Grid2)(() => ({
   padding: '1vw 3vw 2vw 6vw',
 },
 
-'@media (max-width: 390px)': {
+'@media (max-width: 468px)': {
   width: 'auto',
   padding: '1vw 5vw 2vw 5vw',
 

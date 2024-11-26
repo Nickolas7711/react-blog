@@ -11,7 +11,7 @@ export const CardItemSmall = styled('div')(() => ({
   borderRadius: '10px',
   border: '2px solid #72F8FF ',
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     flexDirection: 'row',
     alignItems: 'flex-start',
     height: '156px',
@@ -23,7 +23,7 @@ export const CardItemSmall = styled('div')(() => ({
 export const CardImagesSmall = styled('img')(() => ({
   display: 'none',
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     width: '80px',
     height: '73px',
     display: 'flex',
@@ -43,7 +43,7 @@ export const CardInnerTextSmall = styled('div')(() => ({
   height: '220px',
   gap: '5px',
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     height: 'auto',
   },
   
@@ -59,7 +59,7 @@ export const TitleArticleSmall = styled('div')(() => ({
   fontWeight: '600',
   color: '#ffffff',
 
-  '@media (max-width: 390px)': {
+  '@media (max-width: 468px)': {
     fontSize: '20px',
   },
   
