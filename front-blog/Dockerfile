@@ -1,21 +1,20 @@
-# Dockerfile for frontend (React)
+# Указываем базовый образ Node.js
+FROM node:18
 
-# Stage 1: Build the application
-FROM node:16 AS build
-
+# Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /app
 
-COPY ./front-blog/package.json ./front-blog/package-lock.json ./
+# Копируем package.json и package-lock.json
+COPY package*.json ./
+
+# Устанавливаем зависимости
 RUN npm install
 
-COPY ./front-blog ./
-RUN npm run build
+# Копируем все файлы проекта в контейнер
+COPY . .
 
-# Stage 2: Serve the application
-FROM nginx:alpine
+# Указываем порт, на котором приложение будет работать
+EXPOSE 3000
 
-COPY --from=build /app/build /usr/share/nginx/html
-
-EXPOSE 7777
-
-CMD ["nginx", "-g", "daemon off;"]
+# Запускаем приложение
+CMD ["npm", "start"]
