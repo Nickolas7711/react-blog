@@ -9,10 +9,14 @@ function CadrItemArticleSmall ({ card }){
 
   useEffect(() => {
     const updateSliceLength = () => {
-      if (window.innerWidth < 470) {
+      if (window.innerWidth < 825) {
+        setSliceLength(80);
+      } else if (window.innerWidth < 925) {
         setSliceLength(100);
-      } else if (window.innerWidth < 1024) {
-        setSliceLength(500);
+      } else if (window.innerWidth < 1075) {
+        setSliceLength(150);
+      } else if (window.innerWidth < 1180) {
+        setSliceLength(200);
       } else {
         setSliceLength(1000);
       }

@@ -11,15 +11,33 @@ export const CalendarWidgetBox = styled('div')(() => ({
   borderRadius: '10px',
   border: '2px solid #72F8FF ',
 
+  '@media (max-width: 1456px)': {
+    padding: '10px 23px 20px 25px',
+    
+  },
+
+  '@media (max-width: 1326px)': {
+    padding: '10px 5px 20px 25px',
+    
+  },
+
   '@media (max-width: 1220px)': {
     padding: '10px 17px 20px 24px',
     
   },
 
-  // '@media (max-width: 390px)': {
-  //   display: 'block',
+  '@media (max-width: 1145px)': {
+    padding: '10px 5px 20px 7px',
     
-  // }
+  },
+
+  '@media (max-width: 736px)': {
+    padding: '10px 49px 20px 49px',
+    
+  },
+
+
+  
 }));
 
 export const BoxMonthYear = styled('div')(() => ({
@@ -28,7 +46,23 @@ export const BoxMonthYear = styled('div')(() => ({
   justifyContent: 'flex-start',
   width: '305px',
   gap: '15px',
-  
+
+  '@media (max-width: 1326px)': {
+    paddingTop: '10px',
+    
+  },
+
+  '@media (max-width: 1110px)': {
+    paddingTop: '5px',
+    width: '283px',
+    
+  },
+
+  '@media (max-width: 960px)': {
+    paddingTop: '5px',
+    width: 'auto',
+    
+  },
    
 }));
 
@@ -40,6 +74,8 @@ export const TitleMonth = styled('div')(() => ({
   fontWeight: '600',
   fontSize: '24px',
   color: '#6AEBFF',
+
+  '@media (max-width: 1270px)': {fontSize: '22px'},
    
 }));
 
@@ -51,6 +87,8 @@ export const TitleYear = styled('div')(() => ({
   fontWeight: '600',
   fontSize: '24px',
   color: '#6AEBFF',
+
+  '@media (max-width: 1270px)': {fontSize: '22px'},
    
 }));
 
@@ -59,6 +97,36 @@ export const BoxDaysGrid = styled('div')(() => ({
   gridTemplateColumns: 'repeat(7, 35px)',
   justifyItems: 'center',
   gap: '10px',
+
+  '@media (max-width: 1416px)': {
+    gap: '6px',
+
+  },
+
+  '@media (max-width: 1014px)': {
+    gap: '3px',
+
+  },
+
+  '@media (max-width: 960px)': {
+    gap: '2px',
+
+  },
+
+  '@media (max-width: 898px)': {
+    gridTemplateColumns: 'repeat(7, 28px)',
+
+  },
+
+  '@media (max-width: 798px)': {
+    gridTemplateColumns: 'repeat(7, 3.3vw)',
+
+  },
+
+  '@media (max-width: 736px)': {
+    gridTemplateColumns: 'repeat(7, 4.3vw)',
+    gap: '10px',
+  },
    
 }));
 
@@ -82,5 +150,16 @@ export const NumberDay = styled('div')(({ status }) => ({
   '@media (max-width: 1610px)': {
     width: '25px',
     height: '25px',
+  },
+
+  '@media (max-width: 1270px)': {
+    width: '22px',
+    height: '22px',
+  },
+
+  '@media (max-width: 1110px)': {
+    width: '20px',
+    height: '20px',
+    fontSize: '15px',
   }
 }));

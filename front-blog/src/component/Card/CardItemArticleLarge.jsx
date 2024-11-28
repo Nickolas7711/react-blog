@@ -8,10 +8,12 @@ function CadrItemArticleLarge ({ card }){
 
   useEffect(() => {
     const updateSliceLength = () => {
-      if (window.innerWidth < 470) {
+      if (window.innerWidth < 982) {
         setSliceLength(100);
-      } else if (window.innerWidth < 1024) {
-        setSliceLength(500);
+      } else if (window.innerWidth < 1072) {
+        setSliceLength(150);
+      } else if (window.innerWidth < 1215) {
+        setSliceLength(200);
       } else {
         setSliceLength(1000);
       }

@@ -17,16 +17,23 @@ export const Title = styled('div')(() => ({
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'flex-start',
-  width: '20vw',
+  width: '45vw',
   color: '#72F8FF',
   paddingLeft:'50px',
   textShadow: `0 0 3px #00e6e6, 0 0 2px #00e6e6, 0 0 14px #00e6e6, 0 0 20px #00e6e6`,
+
+  '@media (max-width: 1030px)': {
+    width: 'auto',
+    paddingLeft:'20px',
+
+  },
 
   '@media (max-width: 468px)': {
     width: 'auto',
     paddingLeft:'10px',
 
-  }
+  },
+
   
  }));
 
@@ -45,21 +52,26 @@ export const Title = styled('div')(() => ({
     top: '62px',
     // bottom: '10px',              
     left: '57%',             
-    width: '60vw',          
+    width: '100%',          
     height: '4px',           
     backgroundColor: 'black',  
     transform: 'translateX(-55%)',
 
-    '@media (max-width: 468px)': {
+    '@media (max-width: 560px)': {
       top: '158px',
       left: '56%',
       width: '70vw'
     }
 
+  },
+
+  '@media (max-width: 1030px)': {
+    width: 'auto',
+    paddingLeft:'20px',
 
   },
 
-  '@media (max-width: 468px)': {
+  '@media (max-width: 560px)': {
     width: 'auto',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -74,12 +86,17 @@ export const Title = styled('div')(() => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   width: '100%',
+  
+  '@media (max-width: 562px)': {
+    flexWrap: 'wrap',
+  },
 
-  '@media (max-width: 468px)': {
+  '@media (max-width: 560px)': {
     width: 'auto',
     alignItems: 'flex-start',
     paddingLeft: '0px',
     gap: '0px',
   }, 
+
   
  }));

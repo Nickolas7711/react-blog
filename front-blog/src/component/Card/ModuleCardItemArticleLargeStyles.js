@@ -18,6 +18,16 @@ export const CardItemLarge = styled('div')(() => ({
     
   },
 
+  '@media (max-width: 910px)': {
+    paddingLeft: '17px',
+    
+  },
+
+  '@media (max-width: 736px)': {
+    height: 'auto',
+    
+  },
+
   '@media (max-width: 468px)': {
     alignItems: 'flex-start',
     gap: '15px',
@@ -42,6 +52,16 @@ export const CardImages = styled('img')(() => ({
     height: '145px',
   },
 
+  '@media (max-width: 910px)': {
+    width: '119px',
+    height: '105px',
+  },
+
+  '@media (max-width: 736px)': {
+    width: '119px',
+    height: '105px',
+  },
+
   '@media (max-width: 468px)': {
     width: '80px',
     height: '73px',
@@ -60,7 +80,11 @@ export const CardInnerText = styled('div')(() => ({
     width: 'auto',
     height: '12.049vw',
     gap: 'opx',
-  }
+  },
+
+  '@media (max-width: 736px)': {
+    height: 'auto',
+  },
   
 }));
 
@@ -74,10 +98,9 @@ export const TitleArticle = styled('div')(() => ({
   fontWeight: '600',
   color: '#ffffff',
 
-  '@media (max-width: 468px)': {
+  '@media (max-width: 865px)': {
     fontSize: '20px',
-    
-    
+       
   },
   
 }));
@@ -103,8 +126,12 @@ export const DescriptionsArticle = styled('div')(() => ({
   color: '#ffffff',
   paddingTop: '20px',
 
-  '@media (max-windth: 468px)': {
+  '@media (max-width: 910px)': {
     paddingTop: '10px',
+  },
+
+  '@media (max-width: 836px)': {
+    paddingTop: '5px',
   },
   
 }));

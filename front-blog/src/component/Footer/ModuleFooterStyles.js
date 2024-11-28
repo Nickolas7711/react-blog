@@ -7,6 +7,14 @@ export const BoxFooter = styled('div')(() => ({
   padding: '30px',
   width: 'auto',
   height: 'auto',
+
+  '@media (max-width: 900px)': {
+    padding: '10px',
+  },
+
+  '@media (max-width: 736px)': {
+    justifyContent: 'center',
+  }
 }));
 
 export const FooterInner = styled('div')(() => ({
@@ -16,6 +24,15 @@ export const FooterInner = styled('div')(() => ({
   height: '10vh',
   paddingLeft: '22px',
   gap: '10px',
+
+  '@media (max-width: 920px)': {
+    height: '7vh',
+    paddingTop: '15px',
+  },
+
+  '@media (max-width: 736px)': {
+    justifyContent: 'center',
+  }
 }));
 
 export const FooterItem = styled('div')(() => ({
@@ -32,4 +49,8 @@ export const Credits = styled('div')(() => ({
   flexDirection: 'row',
   justifyContent: 'center',
   width: '60%',
+
+  '@media (max-width: 920px)': {
+     width: '25%',
+  }
 }))
