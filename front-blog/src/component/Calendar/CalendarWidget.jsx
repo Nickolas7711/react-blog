@@ -4,7 +4,6 @@ import { BoxDaysGrid, BoxMonthYear, CalendarWidgetBox, NumberDay, TitleMonth, Ti
 const CalendarWidget = () => {
   const [currentDate] = useState(new Date());
   const [days, setDays] = useState([]);
-  const [emptyDays, setEmptyDays] = useState([]); // Пустые ячейки перед началом месяца
 
   useEffect(() => {
     const year = currentDate.getFullYear();
@@ -19,9 +18,6 @@ const CalendarWidget = () => {
     // Определяем сдвиг для понедельника в начале недели (где 0 = понедельник)
     const shift = (firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1);
 
-    // Заполняем пустыми днями перед началом месяца
-    const emptyDaysArray = Array.from({ length: shift });
-
     // Заполняем массив дней месяца
     const daysArray = Array.from({ length: daysInMonth }, (_, i) => {
       const date = new Date(year, month, i + 1);
@@ -29,15 +25,15 @@ const CalendarWidget = () => {
         date,
         isPast: date < new Date(),
         isToday: date.toDateString() === new Date().toDateString(),
+        dayOffset: i === 0 ? shift : 0, // Сдвиг только для первого дня
       };
     });
 
-    setEmptyDays(emptyDaysArray);
     setDays(daysArray);
   }, [currentDate]);
 
   const monthNames = [
-    "January", "February", "March", "April", "May", "June", 
+    "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
 
@@ -48,19 +44,14 @@ const CalendarWidget = () => {
         <TitleYear>{currentDate.getFullYear()}</TitleYear>
       </BoxMonthYear>
       <BoxDaysGrid>
-        {/* Пустые ячейки перед началом месяца */}
-        {emptyDays.map((_, index) => (
-          <NumberDay key={`empty-${index}`} status="empty">
-            {/* Оставляем пустым */}
-          </NumberDay>
-        ))}
-        {/* Дни месяца */}
+        {/* Отображение дней месяца */}
         {days.map((day, index) => (
           <NumberDay
             key={index}
             status={day.isPast || day.isToday ? 'open' : 'closed'}
+            style={{ gridColumnStart: day.dayOffset > 0 && index === 0 ? day.dayOffset + 1 : 'auto' }}
           >
-            {day.isPast || day.isToday ? day.date.getDate() : ""}
+            {day.date.getDate()}
           </NumberDay>
         ))}
       </BoxDaysGrid>
@@ -68,4 +59,4 @@ const CalendarWidget = () => {
   );
 };
 
-export default CalendarWidget;
+export default CalendarWidget

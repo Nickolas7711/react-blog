@@ -138,13 +138,13 @@ export const NumberDay = styled('div')(({ status }) => ({
   justifyContent: 'center',
   borderRadius: '3px',
   cursor: 'pointer',
-  color: '#6AEBFF',
-  backgroundColor: status === 'open' ? '' : '#6AEBFF', // Цвет фона
-  border: status === 'open' ? '2px solid #6AEBFF' : '2px solid #6AEBFF', // Граница
-  fontWeight: status === 'open' ? 'bold' : 'normal', // Жирный текст
-  transition: 'background-color 0.3s, border 0.3s', // Анимация изменений
+  color: status === 'open' ? '#6AEBFF' : '#fff', // Цвет текста для статуса
+  backgroundColor: status === 'open' ? 'transparent' : '#6AEBFF', // Цвет фона
+  border: `2px solid #6AEBFF`, // Универсальный стиль границы
+  fontWeight: status === 'open' ? 'bold' : 'normal', // Жирный текст при статусе "open"
+  transition: 'background-color 0.3s ease, border 0.3s ease', // Анимация изменений
   '&:hover': {
-    backgroundColor: status === 'open' ? '#66BB6A' : '#6AEBFF', // Изменение цвета при наведении
+    backgroundColor: status === 'open' ? '#66BB6A' : '#6AEBFF', // Изменение фона при наведении
   },
 
   '@media (max-width: 1610px)': {
