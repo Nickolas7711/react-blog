@@ -6,7 +6,7 @@ export const CardItemSmall = styled('div')(() => ({
   justifyContent: 'flex-start',
   padding: '15px',
   width: 'auto',
-  height: '15vw',
+  height: 'auto',
   gap: '50px',
   borderRadius: '10px',
   border: '2px solid #72F8FF ',

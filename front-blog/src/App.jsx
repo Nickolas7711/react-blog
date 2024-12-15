@@ -6,6 +6,8 @@ import { About } from '../src/page/AboutPage';
 import { ContactMe } from '../src/page/ContactMePage';
 import { NotFound } from './component/NotFound';
 import { ArticleBlog } from './page/BlogArticle';
+import { Auth } from './page/AuthPage';
+import { Admin } from './page/AdminPage';
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
           <Route path='/blogs/about' element={<About />} />
           <Route path='/blogs/contactMe' element={<ContactMe />} />
           <Route path='/article/:id' element={<ArticleBlog/>} />
+        </Route>
+        <Route>
+          <Route path='/admin' element={<Auth />} />
+          <Route path='/admin/cms' element={<Admin />} />
         </Route>
       </Routes>
       
