@@ -8,7 +8,6 @@ export default function Auth() {
       <AuthTitle>Hi, Plaese log in!!!</AuthTitle>
       <AuthForm>
       <CustomTextField id="User" label="User" />
-      <CustomTextField id="E-mail" label="E-mail" />
       <CustomTextField id="Password" label="Password" />
       <ButtonBox>
         <Authbtn>Submit</Authbtn>

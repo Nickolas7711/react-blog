@@ -3,16 +3,16 @@ import { AdminHeaderGrid, AdminMainGrid, AdminMenuGrid, AdminNameGrid, AdminWrap
 import { GlobalStyles } from '@mui/material';
 import ArticlesListAdmin from '../../component/AdminArticles/ArticlesListAdmin';
 
+
 export default function Admin() {
-  return (
+ return (
     <>
       <GlobalStyles styles={{
         body: {
           margin: 0,
           padding: 0,
           boxSizing: 'border-box',
-          // backgroundColor: '#f4f4f4', // Задайте нужный цвет или оставьте прозрачным
-          // overflow: 'hidden', // Если нужно убрать скроллинг
+          
         },
       }} />
     <AdminWrapp container>
@@ -20,7 +20,7 @@ export default function Admin() {
      <NameTitleAdmin> BlogTitle-Admin</NameTitleAdmin>
   </AdminNameGrid>
   <AdminHeaderGrid size={10}>
-    Article List
+    Article List    
   </AdminHeaderGrid>
   <AdminMenuGrid size={2}>
      AdminMenuGrid
