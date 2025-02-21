@@ -13,7 +13,7 @@ export const AdminNameGrid = styled(Grid2)(() => ({
   justifyContent: 'start',
   alignItems: 'center',
   backgroundColor: '#212121',
-  height: '8vh',
+  height: '10vh',
   padding: '10px',
   borderBottom: '2px solid #72F8FF',
   boxShadow: '0 4px 10px rgba(114, 248, 255, 0.3)', 
@@ -44,7 +44,7 @@ export const NameTitleAdmin = styled(Grid2)(() => ({
 
 export const AdminHeaderGrid = styled(Grid2)(() => ({
   backgroundColor: '#212121',
-  height: '8vh',
+  height: '10vh',
   padding: '15px',
   borderBottom: '1px solid #72F8FF',
   boxShadow: '0 4px 10px rgba(114, 248, 255, 0.3)', 
@@ -63,6 +63,19 @@ export const AdminHeaderGrid = styled(Grid2)(() => ({
     zIndex: 2,
   },
 }));
+
+export const TitlePageAdmin = styled('div')(() => ({
+  display: 'flex',
+  alignItems: 'flex-start',
+  paddingLeft: '15px',
+  width: 'auto',
+  height: 'auto',
+  fontFamily: 'Inter',
+  fontSize: '25px',
+  fontWeight: '600',
+  color: '#ffffff', 
+  
+ }));
 
 export const AdminMenuGrid = styled(Grid2)(() => ({
   backgroundColor: '#1a1e1e',

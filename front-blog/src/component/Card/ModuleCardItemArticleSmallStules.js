@@ -112,6 +112,7 @@ export const BoxBtnArticleSmall = styled('div')(() => ({
   justifyContent: 'flex-start',
   paddingTop: '50px',
   paddingLeft: '15px',
+  cursor: 'pointer',
 
   '@media (max-width: 1342px)': {paddingTop: '30px',},
 
@@ -139,6 +140,7 @@ export const ButtonArticleSmall = styled('div')(() => ({
   fontSize: '12px',
   fontWeight: '600',
   color: '#000000',
+  cursor: 'pointer',
   
   
 }));

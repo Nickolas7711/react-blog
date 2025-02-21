@@ -40,8 +40,8 @@ export const AuthForm = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '20px',
-  width: '450px',
-  marginTop: '20px',
+  width: '95%',
+  marginTop: '30px',
 }));
 
 export const CustomTextField = styled(TextField)(() => ({
@@ -93,5 +93,10 @@ export const Authbtn = styled('div')(() => ({
   fontFamily: 'Inter',
   fontSize: '12px',
   fontWeight: '600',
+  cursor: 'pointer',
+
+  '&:hover': {
+    opacity: '0.8',
+  }
   
 }));

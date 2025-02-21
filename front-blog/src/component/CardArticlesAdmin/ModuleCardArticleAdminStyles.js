@@ -30,6 +30,7 @@ export const TitleArticleCardAdmin = styled('div')(() => ({
   fontSize: '24px',
   fontWeight: '600',
   color: '#ffffff',
+  cursor: 'pointer',
   
 }));
 
@@ -58,10 +59,10 @@ export const DescriptionsArticleCardAdmin = styled('div')(() => ({
 
 export const BoxBtnArticleCardAdmin = styled('div')(() => ({
   display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'flex-end',
-  paddingTop: '50px',
-  paddingRight: '15px',
+  flexDirection: 'column',
+  justifyContent: 'space-around',
+  height: '90%',
+  
   
 }));
 
@@ -77,6 +78,7 @@ export const ButtonArticleCardAdmin = styled('div')(() => ({
   fontSize: '12px',
   fontWeight: '600',
   color: '#000000',
-  
+  cursor: 'pointer',
+  opacity: '0.8',
   
 }));

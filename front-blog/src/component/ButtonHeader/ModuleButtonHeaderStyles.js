@@ -11,6 +11,7 @@ export const BoxButton = styled(MuiButton)(({ active }) => ({
   paddingBottom: '1px',
   position: 'relative',
   color: '#6AEBFF',
+  cursor: 'pointer',
 
   '&:hover': {
     borderBottom: 'none',  // Отключаем стандартное подчеркивание при наведении

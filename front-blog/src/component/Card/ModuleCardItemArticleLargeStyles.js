@@ -162,6 +162,7 @@ export const ButtonArticle = styled('div')(() => ({
   fontSize: '12px',
   fontWeight: '600',
   color: '#000000',
+  cursor: 'pointer',
   
   
 }));

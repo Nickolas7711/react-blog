@@ -37,7 +37,7 @@ export const Title = styled('div')(() => ({
   
  }));
 
- export const BoxButtonPage = styled('div')(() => ({
+  export const BoxButtonPage = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
