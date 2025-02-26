@@ -4,6 +4,10 @@ import { useParams } from 'react-router-dom';
 import { article } from '../../api/article';
 import { ArticleBlogWrrap, ArticleBox, BoxTitleImages, ImagesBox, SubheaderBox, TitleBox, TitleInnerBox } from './ModuleArticleBlogStyles';
 
+const removeHtmlTags = (text) => {
+  return text.replace(/<[^>]*>/g, '');  // Удаляет все HTML теги
+};
+
 export default function ArticleBlog() {
   const { id } = useParams();
   const [articleData, setArticleData] = useState(null);
@@ -52,7 +56,7 @@ export default function ArticleBlog() {
           <SubheaderBox>Data: {articleData.subheader}</SubheaderBox>
         </TitleInnerBox>
       </BoxTitleImages>
-          <ArticleBox>{articleData.article}</ArticleBox>
+          <ArticleBox>{removeHtmlTags(articleData.article)}</ArticleBox>
         </ArticleBlogWrrap>
   ) 
 }
