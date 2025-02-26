@@ -72,8 +72,8 @@ export const CardInnerText = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'flex-start',
-  width: 'auto',
-  height: '220px',
+  width: '100%',
+  height: '100%',
   gap: '5px',
 
   '@media (max-width: 1220px)': {

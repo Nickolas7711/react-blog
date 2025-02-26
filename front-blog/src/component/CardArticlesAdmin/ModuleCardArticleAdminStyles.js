@@ -15,7 +15,7 @@ export const CardInnerTextCardAdmin = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'flex-start',
-  width: 'auto',
+  width: '70%',
   height: 'auto',
   gap: '5px',
 

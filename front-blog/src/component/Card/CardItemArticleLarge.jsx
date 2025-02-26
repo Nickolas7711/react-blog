@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BoxBtnArticle, ButtonArticle, CardImages, CardInnerText, CardItemLarge, DateArticle, DescriptionsArticle, TitleArticle } from './ModuleCardItemArticleLargeStyles';
 
+const removeHtmlTags = (text) => {
+  return text.replace(/<[^>]*>/g, '');
+};
 
 function CadrItemArticleLarge ({ card }){
   const [sliceLength, setSliceLength] = useState(1000);
@@ -44,7 +47,7 @@ function CadrItemArticleLarge ({ card }){
       <CardInnerText>
         <TitleArticle>{card.title}</TitleArticle>
         <DateArticle>Date: {card.subheader} </DateArticle>
-        <DescriptionsArticle>{card.article.slice(0, sliceLength)} ...</DescriptionsArticle> 
+        <DescriptionsArticle>{removeHtmlTags(card.article).slice(0, sliceLength)} ...</DescriptionsArticle> 
         <BoxBtnArticle>
           <ButtonArticle onClick={handleReadMore}>Read More</ButtonArticle>
         </BoxBtnArticle>     

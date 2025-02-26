@@ -12,6 +12,10 @@ import {
 import ModalDelArticle from '../ModalDeleteArticles/ModalDelArticle';
 import { article } from '../../api/article';
 
+const removeHtmlTags = (text) => {
+  return text.replace(/<[^>]*>/g, '');
+};
+
 
 function CardArticleAdmin({ card, updateArticle }) {
   const navigate = useNavigate();
@@ -58,19 +62,22 @@ function CardArticleAdmin({ card, updateArticle }) {
       <CardInnerTextCardAdmin>
         <TitleArticleCardAdmin onClick={handleEdit}>{card.title}</TitleArticleCardAdmin>
         <DateArticleCardAdmin>Date: {card.subheader}</DateArticleCardAdmin>
-        <DescriptionsArticleCardAdmin>{card.article.slice(0, 150)} ...</DescriptionsArticleCardAdmin>
+        <DescriptionsArticleCardAdmin>{removeHtmlTags(card.article).slice(0, 150)} ...</DescriptionsArticleCardAdmin>
       </CardInnerTextCardAdmin>
       <BoxBtnArticleCardAdmin>
         <ButtonArticleCardAdmin onClick={handleEdit}>Редактировать</ButtonArticleCardAdmin>
         <ButtonArticleCardAdmin onClick={() => setShowModal(true)}>Удалить</ButtonArticleCardAdmin>
       </BoxBtnArticleCardAdmin>
+      {showModal && card && (
       <ModalDelArticle
+        card={card}
         showModal={showModal}
         onClose={handleCanselDelete}
         onConfirm={handleDelete}
         loading={loading}
         error={error}
       />
+      )}
 
     </>
   );
