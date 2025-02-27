@@ -1,6 +1,7 @@
 export const AUTH_ROUTE = '/admin';
 export const ADMIN_ROUTE = '/admin/cms';
-export const ADMIN_EDIT_ARTICLE = 'edit/:id';
+export const ADMIN_EDIT_ARTICLE = '/admin/cms/edit/:id';
+export const ADMIN_CREAT_ARTICLE = '/admin/cms/create';
 export const HOME_START_ROUTE = '/';
 export const HOME_ROUTE = '/blogs/home';
 export const ABOUT_ROUTE = '/blogs/about';

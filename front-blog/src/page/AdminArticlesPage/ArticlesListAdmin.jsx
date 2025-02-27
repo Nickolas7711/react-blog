@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { article } from '../../api/article';
-import { Loader } from '../Loader';
+import { Loader } from '../../component/Loader';
 import { ArticleAdminWrapp } from './ModuleArticlesListAdminStyles';
-import CardArticleAdmin from '../CardArticlesAdmin/CardArticleAdmin';
+import CardArticleAdmin from '../../component/CardArticlesAdmin/CardArticleAdmin';
 
 export default function ArticlesListAdmin() {
   const [articlesList, setArticlesList] = useState([]);
@@ -14,7 +14,7 @@ export default function ArticlesListAdmin() {
     setLoading(true);
     try {
       const response = await article.get();
-      setArticlesList(response);
+      setArticlesList(response.reverse());
     } catch (err) {
       console.log(err);
       setError(err);

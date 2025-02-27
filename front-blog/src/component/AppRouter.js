@@ -7,9 +7,10 @@ import { Auth } from '../page/AuthPage';
 import { observer } from 'mobx-react-lite';
 import { Context } from '../index';
 import { Admin } from './AdminTemplates';
-import ArticlesListAdmin from './AdminArticles/ArticlesListAdmin';
+import ArticlesListAdmin from '../page/AdminArticlesPage/ArticlesListAdmin';
 import EditArticle from '../page/EditArticlePage/EditArticle';
-import { ADMIN_EDIT_ARTICLE, ADMIN_ROUTE, AUTH_ROUTE } from '../utils/constsRouter';
+import { ADMIN_CREAT_ARTICLE, ADMIN_EDIT_ARTICLE, ADMIN_ROUTE, AUTH_ROUTE } from '../utils/constsRouter';
+import CreateArticle from '../page/CreateArticlePage/CreateArticle';
 
 const AppRouter = observer(() => {
   const { user } = useContext(Context);
@@ -24,6 +25,7 @@ const AppRouter = observer(() => {
         <Route path={ AUTH_ROUTE } element={<Admin />} >  
         <Route path={ADMIN_ROUTE} element={<ArticlesListAdmin />} />
         <Route path={ADMIN_EDIT_ARTICLE} element={<EditArticle />} />
+        <Route path={ADMIN_CREAT_ARTICLE} element={<CreateArticle />} />
         </Route>
       )}
 

@@ -5,7 +5,7 @@ import { article } from '../../api/article';
 import { ArticleBlogWrrap, ArticleBox, BoxTitleImages, ImagesBox, SubheaderBox, TitleBox, TitleInnerBox } from './ModuleArticleBlogStyles';
 
 const removeHtmlTags = (text) => {
-  return text.replace(/<[^>]*>/g, '');  // Удаляет все HTML теги
+  return text.replace(/<[^>]*>/g, '');  
 };
 
 export default function ArticleBlog() {

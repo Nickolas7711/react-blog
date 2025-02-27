@@ -11,6 +11,7 @@ import {
 } from './ModuleCardArticleAdminStyles';
 import ModalDelArticle from '../ModalDeleteArticles/ModalDelArticle';
 import { article } from '../../api/article';
+import { ADMIN_EDIT_ARTICLE } from '../../utils/constsRouter';
 
 const removeHtmlTags = (text) => {
   return text.replace(/<[^>]*>/g, '');
@@ -26,7 +27,7 @@ function CardArticleAdmin({ card, updateArticle }) {
 
   // Функция для редиректа на страницу редактирования статьи
   const handleEdit = () => {
-    navigate(`/admin/edit/${card.id}`);
+    navigate(`${ADMIN_EDIT_ARTICLE.replace(':id', card.id)}`);
   };
 
   // Функция удаления статьи

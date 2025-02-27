@@ -27,7 +27,7 @@ export default function Home() {
 
     try {
       const response = await article.get();
-      setArticleList(response);
+      setArticleList(response.reverse());
     } catch (err) {
       console.log(err);
       setError(err);

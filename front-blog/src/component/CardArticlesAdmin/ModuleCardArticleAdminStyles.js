@@ -6,7 +6,7 @@ export const CardImagesAdmin = styled('img')(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  overflow: 'cover',
+  objectFit: 'cover',
   borderRadius: '10px',
 
 }));
@@ -79,6 +79,8 @@ export const ButtonArticleCardAdmin = styled('div')(() => ({
   fontWeight: '600',
   color: '#000000',
   cursor: 'pointer',
-  opacity: '0.8',
+  ':hover': {
+    opacity: '0.8',
+  }
   
 }));

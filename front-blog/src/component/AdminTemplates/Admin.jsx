@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { 
   AdminHeaderGrid, 
   AdminMainGrid, 
@@ -12,16 +12,29 @@ import {
 import { GlobalStyles } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import { ADMIN_PAGE_TITLES } from '../../utils/constNamePageAdmin';
+import { ADMIN_CREAT_ARTICLE } from '../../utils/constsRouter';
 
 export default function Admin() {
+
+  const navigate = useNavigate();
   const location = useLocation();
 
+  const getPageTitle = (pathname) => {
+    if (pathname.startsWith('/admin/cms/edit/')) {
+      return 'Редактирование статьи';
+    }
+    
+    return ADMIN_PAGE_TITLES[pathname] || 'Админ панель';
+  };
+
+  const handleCreat = () => {
+    navigate(ADMIN_CREAT_ARTICLE);
+  };
+
+  
+
   // Определяем заголовок по текущему пути
-  const pageTitle = Object.keys(ADMIN_PAGE_TITLES).find((key) =>
-    location.pathname.startsWith(key)
-  ) 
-    ? ADMIN_PAGE_TITLES[Object.keys(ADMIN_PAGE_TITLES).find((key) => location.pathname.startsWith(key))] 
-    : 'Admin Panel';
+  const pageTitle = getPageTitle(location.pathname);
 
   return (
     <>
@@ -40,6 +53,7 @@ export default function Admin() {
           <TitlePageAdmin>
             {pageTitle}
           </TitlePageAdmin>
+          <button onClick={handleCreat}>Создать новую статью</button>
         </AdminHeaderGrid>
         <AdminMenuGrid size={2}>
           AdminMenuGrid
