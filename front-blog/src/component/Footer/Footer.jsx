@@ -3,6 +3,9 @@ import { Typography } from '@mui/material';
 import { BoxFooter, Credits, FooterInner, FooterItem } from './ModuleFooterStyles';
 
 function Footer() {
+
+  const currentDate = new Date();
+
   return (
     <BoxFooter>
       <FooterInner>
@@ -14,7 +17,7 @@ function Footer() {
         </FooterItem>
           <Credits>
         <FooterItem>
-            <Typography>Copyleft 2024</Typography>
+            <Typography>Copyleft {currentDate.getFullYear()}</Typography>
         </FooterItem>
           </Credits>
       </FooterInner>
