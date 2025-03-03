@@ -14,10 +14,11 @@ export default function ArticlesListAdmin() {
     setLoading(true);
     try {
       const response = await article.get();
-      setArticlesList(response.reverse());
+      // Сортируем статьи по дате обновления (новые на верх)
+      const sortedArticles = [...response].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+      setArticlesList(sortedArticles); // Обновляем список статей
     } catch (err) {
-      console.log(err);
-      setError(err);
+      setError(err.message);
     } finally {
       setLoading(false);
     }

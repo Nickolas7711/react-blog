@@ -29,6 +29,14 @@ function CadrItemArticleLarge ({ card }){
     return () => window.removeEventListener('resize', updateSliceLength);
   }, []);
 
+  const formattedDate = new Date(card.updatedAt).toLocaleString('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+    // hour: '2-digit',
+    // minute: '2-digit'
+  });
+
   const navigate = useNavigate();
 
   const handleReadMore = () => {
@@ -41,12 +49,12 @@ function CadrItemArticleLarge ({ card }){
       <CardImages
         component="img"
         height="194"
-        src={card.image}
+        src={`http://localhost:5000/images/articles/${card.image}`}
         alt={card.title}
       />
       <CardInnerText>
         <TitleArticle>{card.title}</TitleArticle>
-        <DateArticle>Date: {card.subheader} </DateArticle>
+        <DateArticle>Date: {formattedDate} </DateArticle>
         <DescriptionsArticle>{removeHtmlTags(card.article).slice(0, sliceLength)} ...</DescriptionsArticle> 
         <BoxBtnArticle>
           <ButtonArticle onClick={handleReadMore}>Read More</ButtonArticle>

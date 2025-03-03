@@ -20,7 +20,6 @@ import Editor from '../../component/EditorSetting/Editor';
 const CreateArticle = () => {
   const navigate = useNavigate();
 
-  const [subheader, setSubheader] = useState('');
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [image, setImage] = useState('');
@@ -46,24 +45,27 @@ const CreateArticle = () => {
   };
 
   const handleSave = async () => {
+    if (!title || !content) {
+      setError('Название и контент статьи обязательны для заполнения');
+      return;
+    }
+
     try {
       setLoading(true);
       const formData = new FormData();
-      formData.append('subheader', subheader)
       formData.append('title', title);
       formData.append('article', content);
       if (imageFile) {
         formData.append('image', imageFile);
       }
 
-      for (let pair of formData.entries()) {
-        console.log(pair[0] + ": " + pair[1]);
-      }
+      console.log('Form data:', formData);
 
       const response = await article.post(formData);
 
-      if (response) {
-        navigate(ADMIN_ROUTE);
+      
+      if (response.status === 200) {
+        navigate(ADMIN_ROUTE); // Перенаправление на страницу администрирования
       } else {
         setError('Ошибка при создании статьи');
       }
@@ -93,12 +95,6 @@ const CreateArticle = () => {
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Название статьи"
           />
-          <input
-    type="text"
-    value={subheader}
-    onChange={(e) => setSubheader(e.target.value)}
-    placeholder="Подзаголовок статьи"
-  />
         </TitleArticleCreate>
         <CreateInnerText>
           <Editor value={content} onChange={handleContentChange} />

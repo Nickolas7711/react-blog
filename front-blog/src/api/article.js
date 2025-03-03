@@ -2,7 +2,7 @@ import axios from './servise';
 
 const article = {
   // Получение списка всех статей
-  get: () => axios.get('/article')
+  get: () => axios.get('/articles')
     .then(({ data }) => data)
     .catch((err) => {
       console.error('Ошибка при получении списка статей:', err.response || err.message);
@@ -10,7 +10,7 @@ const article = {
     }),
 
   // Создание новой статьи
-  post: (params) => axios.post('/article', params)
+  post: (params) => axios.post('/articles', params)
     .then(({ data }) => data)
     .catch((err) => {
       console.error('Ошибка при создании статьи:', err.response || err.message);
@@ -18,7 +18,7 @@ const article = {
     }),
 
   // Получение статьи по ID
-  getById: (id) => axios.get(`/article/${id}`)
+  getById: (id) => axios.get(`/articles/${id}`)
     .then(({ data }) => {
       if (!data) {
         throw new Error('Статья не найдена');
@@ -31,7 +31,7 @@ const article = {
     }),
 
   // Обновление статьи по ID
-  update: (id, params) => axios.put(`/article/${id}`, params)
+  update: (id, params) => axios.put(`/articles/${id}`, params)
     .then((response) => {
       if (response.status === 200) {
         return response.data;
@@ -44,7 +44,7 @@ const article = {
     }),
 
   // Удаление статьи по ID
-  delete: (id) => axios.delete(`/article/${id}`)
+  delete: (id) => axios.delete(`/articles/${id}`)
     .then(({ data }) => data)
     .catch((err) => {
       console.error(`Ошибка при удалении статьи с ID ${id}:`, err.response || err.message);

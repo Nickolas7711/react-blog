@@ -12,10 +12,9 @@ const EditArticle = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [subheader, setSubheader] = useState('');
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState(null);
   const [imageFile, setImageFile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -25,7 +24,6 @@ const EditArticle = () => {
       setLoading(true);
       try {
         const response = await article.getById(id);
-        setSubheader(response.subheader);
         setTitle(response.title);
         setContent(response.article);
         setImage(response.image); // Загружаем текущее изображение
@@ -53,25 +51,26 @@ const EditArticle = () => {
   };
 
   const handleRemoveImage = () => {
-    setImage('');
+    setImage(null);
     setImageFile(null);
   };
 
   const handleSave = async () => {
     try {
       const formData = new FormData();
-      formData.append('subheader', subheader);
       formData.append('title', title);
       formData.append('article', content);
 
       if (imageFile) {
         formData.append('image', imageFile); // Если выбрано новое изображение
-      } else {
-        formData.append('image', image); // Используем старое изображение
+      } else if (image) {
+        formData.append('existingImage', image); // Используем старое изображение
       }
 
+      
       const response = await article.update(id, formData);
-
+      
+      
       if (response) {
         navigate(ADMIN_ROUTE);
       } else {
@@ -111,11 +110,11 @@ const EditArticle = () => {
       </EditBoxBtn>
       </EditInner>
       <ImgEditInner>      
-        {image ? (
-          <BoxInnerImg>
-            <img src={image} alt={title} />
-            <button onClick={handleRemoveImage}>Удалить фото</button>
-          </BoxInnerImg>
+      {image || imageFile ? (  // проверка, если есть изображение или загруженный файл
+    <BoxInnerImg>
+      <img src={imageFile ? URL.createObjectURL(imageFile) : image} alt={title} />
+      <button onClick={handleRemoveImage}>Удалить фото</button>
+    </BoxInnerImg>
         ) : (
           <BoxInnerNoImage>
   <img src="/images/no-img.jpeg" alt="No-image" />

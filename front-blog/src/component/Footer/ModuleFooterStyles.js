@@ -22,7 +22,7 @@ export const FooterInner = styled('div')(() => ({
   flexDirection: 'row',
   width: '100%',
   height: '10vh',
-  paddingLeft: '22px',
+  paddingLeft: '50px',
   gap: '10px',
 
   '@media (max-width: 920px)': {

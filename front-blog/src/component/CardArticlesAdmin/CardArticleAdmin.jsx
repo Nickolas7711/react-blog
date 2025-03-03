@@ -52,17 +52,25 @@ function CardArticleAdmin({ card, updateArticle }) {
     setShowModal(false);
   }
 
+  const formattedDate = new Date(card.updatedAt).toLocaleString('ru-RU', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
   return (
     <>
       <CardImagesAdmin
         component="img"
         height="194"
-        src={card.image}
+        src={`http://localhost:5000/images/articles/${card.image}`}
         alt={card.title}
       />
       <CardInnerTextCardAdmin>
         <TitleArticleCardAdmin onClick={handleEdit}>{card.title}</TitleArticleCardAdmin>
-        <DateArticleCardAdmin>Date: {card.subheader}</DateArticleCardAdmin>
+        <DateArticleCardAdmin>Date: {formattedDate}</DateArticleCardAdmin>
         <DescriptionsArticleCardAdmin>{removeHtmlTags(card.article).slice(0, 150)} ...</DescriptionsArticleCardAdmin>
       </CardInnerTextCardAdmin>
       <BoxBtnArticleCardAdmin>

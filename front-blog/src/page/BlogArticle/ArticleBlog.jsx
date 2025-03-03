@@ -15,14 +15,12 @@ export default function ArticleBlog() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Функция для поиска статьи по заголовку
     const fetchArticle = async () => {
       setLoading(true);
       try {
-        // Здесь вы получаете все статьи из API
         const response = await article.get(); // Получаем все статьи
-        const foundArticle = response.find((art) => art.id === id); // Ищем статью по id
-
+        const foundArticle = response.find((art) => art.id === Number(id)); // Ищем статью по id
+        
         if (foundArticle) {
           setArticleData(foundArticle);
         } else {
@@ -38,6 +36,13 @@ export default function ArticleBlog() {
     fetchArticle();
   }, [id]); // Перезапускать загрузку при изменении id
 
+  // Убедитесь, что articleData не null, прежде чем форматировать дату
+  const formattedDate = articleData ? new Date(articleData.updatedAt).toLocaleString('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  }) : '';
+
   // Если данные еще загружаются
   if (loading) return <Loader />;
 
@@ -46,19 +51,25 @@ export default function ArticleBlog() {
 
   return (    
     <ArticleBlogWrrap>
-      <BoxTitleImages>
-        <ImagesBox
-          src={articleData.image}
-          alt={articleData.title}
-        />
-        <TitleInnerBox>
-          <TitleBox>{articleData.title}</TitleBox>
-          <SubheaderBox>Data: {articleData.subheader}</SubheaderBox>
-        </TitleInnerBox>
-      </BoxTitleImages>
+      {articleData ? (
+        <>
+          <BoxTitleImages>
+            <ImagesBox
+              src={`http://localhost:5000/images/articles/${articleData.image}`}
+              alt={articleData.title}
+            />
+            <TitleInnerBox>
+              <TitleBox>{articleData.title}</TitleBox>
+              <SubheaderBox>Data: {formattedDate}</SubheaderBox>
+            </TitleInnerBox>
+          </BoxTitleImages>
           <ArticleBox>{removeHtmlTags(articleData.article)}</ArticleBox>
-        </ArticleBlogWrrap>
-  ) 
+        </>
+      ) : (
+        <p>Статья не найдена или загружается...</p>
+      )}
+    </ArticleBlogWrrap>
+  );
 }
 
 
